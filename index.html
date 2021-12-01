@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+  <script>
+    const playerSelection = prompt('Choose your weapon : Rock, Paper or Scissors. Good Luck!','');
+    const computerSelection = computerPlay(playerSelection);
+    let playerScore = 0;
+    let computerScore = 0;
+
+    function computerPlay (playerSelection) {
+      if ( playerSelection.toLowerCase() === 'rock') {
+        return 'paper'
+      } else if ( playerSelection.toLowerCase() === 'scissors') {
+        return 'rock'
+      } else {
+        return 'scissors'
+      }
+    }
+
+    function playRound ( playerSelection, computerSelection) {
+      let str = computerSelection;
+      return ' You Lose! ' + str.charAt(0).toUpperCase() + computerSelection.slice(1) + ' beats ' + playerSelection.toLowerCase() + '!';
+    }
+
+    
+    function game() {
+    //   //get input from the user
+    if (playerSelection.toLowerCase() === 'scissors' || playerSelection.toLowerCase() === 'rock' || playerSelection.toLowerCase() === 'paper'){
+      computerScore = ++computerScore;
+      playerScore = 0;
+      let win = (
+        'The computer has : ' + computerScore 
+        + '. The player has : ' + playerScore + '.'
+        + playRound(playerSelection, computerSelection)
+      );
+      
+      return win;
+    } 
+    
+   
+    }
+    console.log(game());
+
+    
+  </script>
+</body>
+</html>
