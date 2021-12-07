@@ -4,50 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-  <script>
-    const playerSelection = prompt('Choose your weapon : Rock, Paper or Scissors. Good Luck!','');
-    const computerSelection = computerPlay(playerSelection);
-    let playerScore = 0;
-    let computerScore = 0;
+  <h1>Rock~Paper~Scissors</h1>
+  <h2>Let the best win!</h2>
+  <div class="images">
+    <button class="btn" id="btn1"><img src="rock.png" alt="A rock" value = 'rock'></button>
+    <button class="btn" id="btn2"><img src="paper.webp" alt="A piece" value = 'paper'></button>
+    <button class="btn" id="btn3"><img src="scissors.jpeg" alt="A pair of scissors" value = 'scissors'></button>
+  </div>
+  <div id="result" style="display: flex; justify-content: center; margin: 10px;" ></div>
+  <script src="script.js" ></script>
 
-    function computerPlay (playerSelection) {
-      if ( playerSelection.toLowerCase() === 'rock') {
-        return 'paper'
-      } else if ( playerSelection.toLowerCase() === 'scissors') {
-        return 'rock'
-      } else {
-        return 'scissors'
-      }
-    }
-
-    function playRound ( playerSelection, computerSelection) {
-      let str = computerSelection;
-      return ' You Lose! ' + str.charAt(0).toUpperCase() + computerSelection.slice(1) + ' beats ' + playerSelection.toLowerCase() + '!';
-    }
-
-    
-    function game() {
-    //   //get input from the user
-    if (playerSelection.toLowerCase() === 'scissors' || playerSelection.toLowerCase() === 'rock' || playerSelection.toLowerCase() === 'paper'){
-      computerScore = ++computerScore;
-      playerScore = 0;
-      let win = (
-        'The computer has : ' + computerScore 
-        + '. The player has : ' + playerScore + '.'
-        + playRound(playerSelection, computerSelection)
-      );
-      
-      return win;
-    } 
-    
-   
-    }
-    console.log(game());
-
-    
-  </script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+body {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+.images,
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+}
+
+button {
+  border-style: none;
+  padding: 10px;
+  margin: 10px;
+}
